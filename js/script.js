@@ -33,8 +33,8 @@ window.addEventListener("load", ()=>{
 function loadMusic(indexNumb){
   musicName.innerText = allMusic[indexNumb - 1].name;
   musicArtist.innerText = allMusic[indexNumb - 1].artist;
-  musicImg.src = `images/${allMusic[indexNumb - 1].img}`;
-  mainAudio.src = `songs/${allMusic[indexNumb - 1].src}.mp3`;
+  musicImg.src = `https://ppk-bucket1.s3.ap-southeast-1.amazonaws.com/images/${allMusic[indexNumb - 1].img}`;
+  mainAudio.src = `https://ppk-bucket1.s3.ap-southeast-1.amazonaws.com/songs/${allMusic[indexNumb - 1].src}.mp3`;
   youtube.href = allMusic[indexNumb - 1].url;
 }
 
@@ -224,7 +224,7 @@ for (let i = 0; i < allMusic.length; i++) {
                   <p>${allMusic[i].artist}</p>
                 </div>
                 <span id="${allMusic[i].src}" class="audio-duration"></span>
-                <audio class="${allMusic[i].src}" src="songs/${allMusic[i].src}.mp3"></audio>
+                <audio class="${allMusic[i].src}" src="https://ppk-bucket1.s3.ap-southeast-1.amazonaws.com/songs/${allMusic[i].src}.mp3"></audio>
               </li>`;
   ulTag.insertAdjacentHTML("beforeend", liTag); //inserting the li inside ul tag
 
